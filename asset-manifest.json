@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/hackuci-tech-app/static/css/main.93006232.css",
+    "main.css": "/hackuci-tech-app/static/css/main.8c420274.css",
     "main.js": "/hackuci-tech-app/static/js/main.32c39086.js",
     "static/js/787.0b8201b6.chunk.js": "/hackuci-tech-app/static/js/787.0b8201b6.chunk.js",
     "static/media/petr.png": "/hackuci-tech-app/static/media/petr.01935b41bb77fcacbc56.png",
     "index.html": "/hackuci-tech-app/index.html",
-    "main.93006232.css.map": "/hackuci-tech-app/static/css/main.93006232.css.map",
+    "main.8c420274.css.map": "/hackuci-tech-app/static/css/main.8c420274.css.map",
     "main.32c39086.js.map": "/hackuci-tech-app/static/js/main.32c39086.js.map",
     "787.0b8201b6.chunk.js.map": "/hackuci-tech-app/static/js/787.0b8201b6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.93006232.css",
+    "static/css/main.8c420274.css",
     "static/js/main.32c39086.js"
   ]
 }
