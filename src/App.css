@@ -3,36 +3,38 @@ html {
 }
 
 body {
-    background: linear-gradient(90deg, rgba(255,123,92,1) 0%, rgba(255,108,129,1) 50%);
+    background: linear-gradient(-180deg, rgba(255,123,92,1) 0%, rgba(255,108,129,1) 50%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     min-height: 100vh;
     margin: 0;
     padding: 0;
-    position: relative;
 }
 
 h1 {
     font-size: 1.75rem !important;
 }
 
-.container {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
+@media (min-width: 992px) {
+    .container {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+    }
 }
 
 #hackuci-app {
-    width: 60%;
     border-radius: 20px !important;
+    width: 60%;
 }
 
 .button-orange {
-    width: 25%;
     color: white;
     background-color: rgba(255, 123, 92, 1);
     border: 0;
     border-radius: 100px;
-    padding: 5px 0;
+    padding: 5px 20px;
 }
 
 #petr {
@@ -53,8 +55,8 @@ h1 {
     }
 }
 
-@media only screen and (max-width: 760px) {
+@media (min-width: 992px) {
     body {
-        background: linear-gradient(0deg, rgba(255,123,92,1) 0%, rgba(255,108,129,1) 50%);
+        background: linear-gradient(90deg, rgba(255,123,92,1) 0%, rgba(255,108,129,1) 50%);
     }
 }
