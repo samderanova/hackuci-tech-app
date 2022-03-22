@@ -1,38 +1,60 @@
-.App {
-  text-align: center;
+html {
+    font-size: 14px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    background: linear-gradient(90deg, rgba(255,123,92,1) 0%, rgba(255,108,129,1) 50%);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+    font-size: 1.75rem !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.container {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
 }
 
-.App-link {
-  color: #61dafb;
+#hackuci-app {
+    width: 60%;
+    border-radius: 20px !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button-orange {
+    width: 25%;
+    color: white;
+    background-color: rgba(255, 123, 92, 1);
+    border: 0;
+    border-radius: 100px;
+    padding: 5px 0;
+}
+
+#petr {
+    animation-name: floatDown, floatUp;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+}
+
+@keyframes floatDown {
+    from {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(5px);   
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    body {
+        background: linear-gradient(0deg, rgba(255,123,92,1) 0%, rgba(255,108,129,1) 50%);
+    }
 }
