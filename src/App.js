@@ -18,22 +18,16 @@ function App() {
 
     const inputFields = [name, email, funFact];
 
-    // If any of the fields are empty, show invalid status and return
-    for (let element of inputFields) {
-      if (element.value === '') {
-        element.classList.add('is-invalid');
-        return;
-      }
-    }
-    
     // Send user data to the appropriate API. Since this is a GET request, 
     // there is no need to specify any additional parameters. Instead, the values
     // can be appended to the end of the URL.
     const response = await fetch(`${TEST_ENDPOINT}?name=${name.value}&email=${email.value}&funfact=${funFact.value}`);
 
-    // If the response is 200, then the data was successfully submitted. Display an alert message, clear all styles for
-    // invalid inputs, and clear all input text.
+    // If the response is 200, then the data was successfully submitted. Log the response in the console, display
+    // an alert message, clear all styles for invalid inputs, and clear all input text.
     if (response.status === 200) {
+      console.log(response);
+
       alert("Your form was successfully submitted. Thank you!");
 
       inputFields.forEach(element => {
@@ -46,8 +40,10 @@ function App() {
     // email provided is invalid.
     else {
       email.classList.add('is-invalid');
+      email.focus();
     }
   }
+  
   useEffect(() => {
     const formElements = document.forms['hackuci-app'].elements;
 
@@ -55,19 +51,27 @@ function App() {
     const email = formElements.f_email;
     const funFact = formElements.f_funfact;
 
+    // Use Bootstrap error messages and styling instead of the
+    // default HTML5 tooltips.
     [name, email, funFact].forEach(element => {
+
       element.addEventListener('input', event => {
         event.preventDefault();
         if (element.validity.valid) {
           element.classList.remove('is-invalid');
         }
-      })
+      });
+
       element.addEventListener('invalid', event => {
         event.preventDefault();
         element.classList.add('is-invalid');
-      })
-    })
+        document.querySelector('.is-invalid').focus();
+      });
+
+    });    
+
   }, []);
+  
   return (
     <div className="App">
       <div className="container">
